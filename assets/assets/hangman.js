@@ -4,42 +4,81 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H",
 "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
  "U", "V", "W", "X", "Y", "Z", "_"];
 
- var Stan = ["S", "T", "A", "N"]
+//  var Stan = ["S", "T", "A", "N"]
 
- var Cartman = ["C","A","R","T","M","A","N"]
+//  var Cartman = ["C","A","R","T","M","A","N"]
+
+ var words = ['car', 'bus', 'boat', 'airplane'];
+
+ var chosen = words[Math.floor(Math.random()* words.length)];
+
+ start()
+console.log(chosen)
+ function start(){
+    var usrGuess = '';
+    var i = 0;
+    var newarr = ''
+    var letters = [];
+     var dash =[];
+     for(var i = 0; i <chosen.length; i++){
+         dash.push('-')
+         letters.push(chosen[i])
+     }
+    document.getElementById('toGuess').innerHTML = dash;
+     console.log(dash)
+     console.log(letters)
+
+    document.onkeypress = function (e){
+        usrGuess = e.key;
+        i = letters.indexOf(usrGuess)
+    for(var y = 0; y < letters.length; y++){
+        //debugger;
+        if( letters[i] > -1 && letters[y] == letters[i]){
+            
+            newarr = dash.splice(i, 1, usrGuess)
+            document.getElementById('toGuess').innerHTML = newarr;
+        }
+       
+    }
+        console.log(letters.indexOf(usrGuess));
+        console.log(e.key)
+    }
+ }
+
+
 
 //how we are going to get the buttons to display
 
-function logArray(list) {
-    for(var i = 0; i < list.length; i++) {
-        document.write(list[i]);
-    }
-};
+// function logArray(list) {
+//     for(var i = 0; i < list.length; i++) {
+//         document.write(list[i]);
+//     }
+// };
 
-logArray(letters);
+// logArray(letters);
 
 // letters.addClass("alphabet");
 
 
-//first try, didnt work
-document.onclick = function (event) {
-    var userGuess= event.onclick;
+// //first try, didnt work
+// document.click = function (event) {
+//     var userGuess= event.onclick;
 
-    if ((userGuess === letters[18]) && (userGuess === letters[19]) && (userGuess === letters[0]) && (userGuess === letters[13])) {
-        document.write(stan);
+//     if ((userGuess === letters[18]) && (userGuess === letters[19]) && (userGuess === letters[0]) && (userGuess === letters[13])) {
+//         document.write(stan);
 
-    }
-};
+//     }
+// };
 
-//second try, didn't work
-document.onclick = function (event) {
-    var userGuess= event.onclick;
+// //second try, didn't work
+// document.click = function (event) {
+//     var userGuess= event.onclick;
 
-    if (userGuess === letters[18]) {
-        alert(stan);
+//     if (userGuess === letters[18]) {
+//         alert(stan);
 
-    }
-};
+//     }
+// };
 
 
 
