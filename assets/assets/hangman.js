@@ -34,11 +34,11 @@
 //     for(var y = 0; y < letters.length; y++){
 //         //debugger;
 //         if( letters[i] > -1 && letters[y] == letters[i]){
-            
+        
 //             newarr = dash.splice(i, 1, usrGuess)
 //             document.getElementById('toGuess').innerHTML = newarr;
 //         }
-       
+    
 //     }
 //         console.log(letters.indexOf(usrGuess));
 //         console.log(e.key)
@@ -90,7 +90,7 @@
     //});
     
     function start(){
-        var words = ['stan', 'kyle', 'cartman', 'randy'];
+        var words = ['stan', 'kyle', 'cartman', 'randy', 'token', 'chef', 'southparkmall'];
         var info = pcChoice(); 
         var score = 0;
         var guess = 5;

@@ -1,9 +1,3 @@
-#scoreTrack {
-    color:aquamarine;
-}
-#score {
-    color:red;
-}
 body {
     background: url("/Users/shazamba/Desktop/spwall.jpg");
     background-size:960px;
@@ -12,4 +6,31 @@ body {
 
 
 
+#headerL {
+    Background-color:rgba(226, 142, 24, 0.76);
+    text-align: center;
+    color:bisque;
+}
+
+
+.container {
+    text-align: center;
+    background-color: rgba(162, 98, 223, 0.384);
+}
+
+
+
+
+
+#scoreTrack {
+    color:rgb(226, 240, 99);
+}
+#score {
+    color:rgb(240, 151, 99);
+}
+#guessTrack {
+    color:rgb(226, 240, 99);
+}
+#guess {
+    color:rgb(240, 151, 99);
 }
