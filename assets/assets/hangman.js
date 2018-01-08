@@ -108,9 +108,12 @@
             var dashArr = [];
             var letterArr = chosen.split('');
             var result = [];
+
+            // letterArr = [s, t, a, n]
     
             for (var i=0; i < letterArr.length; i++){
                 dashArr.push(dash);
+                // [s, t, a, n]
             }
     
             toGuess.innerHTML = dashArr;
@@ -125,37 +128,38 @@
     
          }
     
-        function compare(letter){
+        function compare(letter) {
             var dash = info[1];
             var lettArr = info[2];
             var found = [];
     
-            for (var i = 0; i < lettArr.length; i++){
-                if(lettArr[i] == letter){
+            for (var i = 0; i < lettArr.length; i++) {
+                if(lettArr[i] == letter) {
                     found = lettArr[i];
                     dash.splice(i, 1, found)
                 }
             }
     
             var y = lettArr.indexOf(letter);
-            var z = dash.indexOf('-')
+            var z = dash.indexOf('-');
             
             
-            if ( y == -1){
+            if (y == -1) {
                 guess-- 
                 document.getElementById('guess').innerHTML = guess;
                 
-            }else if(z == -1){
-                setTimeout(reset, 1000)
+            }
+            else if (z == -1) {
+                setTimeout(reset, 1000);
                 document.getElementById('toGuess').innerHTML = dash;
                 score++
                 document.getElementById('score').innerHTML = score;
             }
     
-            if( y == -1 && guess == 0) { 
+            if (y == -1 && guess == 0) { 
                 guess = 5;
                 score = 0;
-                setTimeout(reset, 1000)
+                setTimeout(reset, 1000);
                 document.getElementById('score').innerHTML = score;
                 document.getElementById('toGuess').innerHTML = dash;
                 document.getElementById('guess').innerHTML = guess;
