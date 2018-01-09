@@ -34,3 +34,9 @@ body {
 #guess {
     color:rgb(240, 151, 99);
 }
+
+#toGuess {
+    font-family: monospace;
+    font-size: 45px;
+    color: white;
+}
