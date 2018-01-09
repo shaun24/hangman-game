@@ -1,5 +1,6 @@
 body {
-    background: url("/Users/shazamba/Desktop/spwall.jpg");
+    /* background: url("assets/spwall.jpg"); */
+    background: url("/Users/shazamba/Desktop/hangman folder/hangman-game/assets/assets/spwall.jpg");
     background-size:960px;
     
 }
